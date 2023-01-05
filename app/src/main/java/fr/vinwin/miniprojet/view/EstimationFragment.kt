@@ -1,5 +1,7 @@
 package fr.vinwin.miniprojet.view
 
+import ai.onnxruntime.OrtEnvironment
+import ai.onnxruntime.OrtSession
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -26,13 +28,20 @@ class EstimationFragment : Fragment() {
         return binding.root
     }
 
+    private fun createORTSession( ortEnvironment: OrtEnvironment) : OrtSession {
+        val modelBytes = resources.openRawResource( R.raw.model_v1 ).readBytes()
+        return ortEnvironment.createSession( modelBytes )
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val args : EstimationFragmentArgs by navArgs()
         val estimatorViewModel : EstimatorViewModel by viewModels()
 
-        estimatorViewModel.estimate(args.surfaceHabitable,args.surfaceTerrain,args.numberRooms)
+        val ortEnvironment = OrtEnvironment.getEnvironment()
+        val ortSession = createORTSession( ortEnvironment )
+        estimatorViewModel.estimate(args.surfaceHabitable,args.numberRooms,args.surfaceTerrain,1.071855f,49.402764f, 1f, ortSession , ortEnvironment)
 
         estimatorViewModel.estimationResult.observe(viewLifecycleOwner){ value ->
             if(value <= 0f) {
@@ -44,6 +53,7 @@ class EstimationFragment : Fragment() {
                 binding.estimationText.text = getString(R.string.estimation_text, value)
             }
         }
+
 
 
     }

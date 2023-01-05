@@ -1,5 +1,7 @@
 package fr.vinwin.miniprojet.viewModel
 
+import ai.onnxruntime.OrtEnvironment
+import ai.onnxruntime.OrtSession
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -19,8 +21,8 @@ class EstimatorViewModel @Inject constructor(state : SavedStateHandle, private v
     val estimationResult: LiveData<Float> = _estimationResult
 
 
-    fun estimate ( carac1 : Float ,carac2 : Float, carac3 : Float){
-        _estimationResult.value = estimatorBackend.estimate(carac1,carac2,carac3)
-        Log.d("test", "essai  $_estimationResult")
+    fun estimate (surfaceR : Float, nombreP: Float , sufaceT : Float , longitude : Float , latitude : Float , typeBien : Float , ortSession: OrtSession, ortEnvironment: OrtEnvironment){
+        _estimationResult.value = estimatorBackend.estimate(surfaceR,nombreP,sufaceT,longitude,latitude,typeBien, ortSession, ortEnvironment)
+        Log.d("test", "essai  $estimationResult")
     }
 }

@@ -10,5 +10,5 @@ import dagger.hilt.android.components.ViewModelComponent
 @InstallIn (ViewModelComponent :: class)
 abstract class EstimatorBackendModule {
     @Binds
-    abstract fun bindEstimatorBackend ( fakeBackendImpl: FakeBackendImpl): EstimatorBackend
+    abstract fun bindEstimatorBackend ( estimatorBackendImpl: EstimatorBackendImpl): EstimatorBackend
 }

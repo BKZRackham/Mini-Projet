@@ -10,14 +10,6 @@
     android:padding="16dp">
 
 
-    <TextView
-        android:id="@+id/caracText1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        tools:text="Surface habitable"
-        android:layout_marginBottom="16dp"
-        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/editText1"
@@ -30,14 +22,6 @@
         android:textAlignment="center"
         android:importantForAutofill="no"/>
 
-    <TextView
-        android:id="@+id/caracText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        tools:text="Surface terrain"
-        android:layout_marginBottom="16dp"
-        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/editText2"
@@ -50,14 +34,6 @@
         android:textAlignment="center"
         android:importantForAutofill="no"/>
 
-    <TextView
-        android:id="@+id/caracText3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        tools:text="Nombre de pièces"
-        android:layout_marginBottom="16dp"
-        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/editText3"
@@ -70,14 +46,6 @@
         android:textAlignment="center"
         android:importantForAutofill="no"/>
 
-    <TextView
-        android:id="@+id/caracText4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        tools:text="Carac4"
-        android:layout_marginBottom="16dp"
-        android:textSize="20sp"/>
 
     <EditText
         android:id="@+id/editText4"
