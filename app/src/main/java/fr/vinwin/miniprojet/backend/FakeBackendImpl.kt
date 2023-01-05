@@ -7,7 +7,7 @@ class FakeBackendImpl @Inject constructor () : EstimatorBackend {
 
 
 
-    override fun estimate  (carac1: Double, carac2: Double): Double {
-        return (75000.55)
+    override fun estimate  (carac1: Float, carac2: Float, carc3 : Float): Float {
+        return (75000.55f)
     }
 }

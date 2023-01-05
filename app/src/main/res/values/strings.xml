@@ -2,4 +2,10 @@
     <string name="app_name">Mini Projet</string>
     <string name="edit_text_carac1_hint">Entrez un nombre</string>
     <string name="carac_button_text">Estimer</string>
+    <string name="estimation_text">\"Le prix du bien est estimé à %1$f \"</string>
+    <string name="carac1_text">Surface habitable</string>
+    <string name="carac2_text">Surface terrain</string>
+    <string name="carac3_text">Nombre pièces</string>
+    <string name="carac4_text">carac4</string>
+    <string name="estimation_error_text">Erreur de format</string>
 </resources>

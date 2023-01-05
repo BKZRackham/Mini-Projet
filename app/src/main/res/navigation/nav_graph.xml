@@ -10,13 +10,25 @@
         android:name="fr.vinwin.miniprojet.view.CharacteristicsFragment"
         android:label="CharacteristicsFragment" >
         <action
-            android:id="@+id/action_characteristicsFragment_to_mainActivity"
-            app:destination="@id/mainActivity" />
+            android:id="@+id/action_characteristicsFragment_to_estimationFragment"
+            app:destination="@id/estimationFragment" />
     </fragment>
 
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="fr.vinwin.miniprojet.view.MainActivity"
-        android:label="estimation_fragment"
-        tools:layout="@layout/estimation_fragment" />
+    <fragment
+        android:id="@+id/estimationFragment"
+        android:name="fr.vinwin.miniprojet.view.EstimationFragment"
+        android:label="EstimationFragment" >
+        <argument
+            android:name="surface_habitable"
+            app:argType="float" />
+        <argument
+            android:name="surface_terrain"
+            app:argType="float" />
+        <argument
+            android:name="number_rooms"
+            app:argType="float" />
+        <argument
+            android:name="carac4"
+            app:argType="float" />
+    </fragment>
 </navigation>
