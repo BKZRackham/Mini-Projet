@@ -18,31 +18,9 @@ class EstimatorBackendImpl @Inject constructor() : EstimatorBackend {
         longitude: Float,
         latitude: Float,
         typeBien: Float,
-        ortSession: OrtSession,
-        ortEnvironment: OrtEnvironment
     ): Float {
-        // Get the name of the input node
-        val inputName = ortSession.inputNames?.iterator()?.next()
-        // Make a FloatBuffer of the inputs
-        val floatBufferInputs = FloatBuffer.wrap(
-            floatArrayOf(
-                surfaceR,
-                nombreP,
-                surfaceT,
-                longitude,
-                latitude,
-                typeBien
-            )
-        )
-        // Create input tensor with floatBufferInputs of shape ( 1 , 6 )
-        val inputTensor =
-            OnnxTensor.createTensor(ortEnvironment, floatBufferInputs, longArrayOf(1, 6))
-        // Run the model
-        val results = ortSession.run(mapOf(inputName to inputTensor))
-        // Fetch and return the results
-        val output = results[0].value as Array<FloatArray>
-        Log.d("test", "valeur " + output[0][0])
-        return (output[0][0])
+       return(1258*surfaceR - 3984*nombreP + 55*surfaceT +  364721*longitude +
+               885572*latitude +  1517842*typeBien -76242838)
     }
 }
 

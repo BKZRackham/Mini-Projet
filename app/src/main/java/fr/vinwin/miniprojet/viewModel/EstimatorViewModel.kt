@@ -21,8 +21,8 @@ class EstimatorViewModel @Inject constructor(state : SavedStateHandle, private v
     val estimationResult: LiveData<Float> = _estimationResult
 
 
-    fun estimate (surfaceR : Float, nombreP: Float , sufaceT : Float , longitude : Float , latitude : Float , typeBien : Float , ortSession: OrtSession, ortEnvironment: OrtEnvironment){
-        _estimationResult.value = estimatorBackend.estimate(surfaceR,nombreP,sufaceT,longitude,latitude,typeBien, ortSession, ortEnvironment)
-        Log.d("test", "essai  $estimationResult")
+    fun estimate (surfaceR : Float, nombreP: Float , sufaceT : Float , longitude : Float , latitude : Float , typeBien : Float){
+        _estimationResult.value = estimatorBackend.estimate(surfaceR,nombreP,sufaceT,longitude,latitude,typeBien)
+
     }
 }

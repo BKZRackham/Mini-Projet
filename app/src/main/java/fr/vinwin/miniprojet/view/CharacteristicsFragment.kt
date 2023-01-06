@@ -32,9 +32,6 @@ class CharacteristicsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val estimatorViewModel : EstimatorViewModel by viewModels()
-
-
         binding.caracButton.setOnClickListener {
             try {
                 val surfaceR = binding.editText1.text.toString().toFloatOrNull()
@@ -47,6 +44,7 @@ class CharacteristicsFragment : Fragment() {
                 if (surfaceR != null && nombreP != null && surfaceT != null && longitude != null && latitude != null && typeBien != null){
                     val action = CharacteristicsFragmentDirections.actionCharacteristicsFragmentToEstimationFragment(surfaceR,nombreP,surfaceT,longitude,latitude,typeBien)
                     findNavController().navigate(action)
+
                 }
                 else{
                     Toast.makeText( activity, "Veuillez remplir tous les champs" , Toast.LENGTH_LONG ).show()

@@ -9,7 +9,7 @@ class FakeBackendImpl @Inject constructor () : EstimatorBackend {
 
 
 
-    override fun estimate  (surfaceR : Float, nombreP: Float , surfaceT : Float , longitude : Float , latitude : Float , typeBien : Float , ortSession: OrtSession, ortEnvironment: OrtEnvironment): Float {
+    override fun estimate  (surfaceR : Float, nombreP: Float , surfaceT : Float , longitude : Float , latitude : Float , typeBien : Float): Float {
         return (75000.55f)
     }
 }
