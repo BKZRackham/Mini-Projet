@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Mini Projet</string>
-    <string name="edit_text_carac1_hint">Entrez un nombre</string>
+    <string name="edit_text_carac1_hint">Surface du bien</string>
     <string name="carac_button_text">Estimer</string>
     <string name="estimation_text">\"Le prix du bien est estimé à %1$.2f \"</string>
     <string name="carac1_text">Surface habitable</string>
