@@ -8,4 +8,9 @@
     <string name="carac3_text">Nombre pièces</string>
     <string name="carac4_text">carac4</string>
     <string name="estimation_error_text">Erreur de format</string>
+    <string name="edit_text_carac2_hint">Nombre de pièces</string>
+    <string name="edit_text_carac3_hint">Surface terrain</string>
+    <string name="edit_text_carac4_hint">Longitude</string>
+    <string name="edit_text_carac5_hint">Latitude</string>
+    <string name="edit_text_carac6_hint">Type de bien</string>
 </resources>

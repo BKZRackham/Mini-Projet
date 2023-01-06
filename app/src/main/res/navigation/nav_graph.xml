@@ -28,7 +28,13 @@
             android:name="number_rooms"
             app:argType="float" />
         <argument
-            android:name="carac4"
+            android:name="longitude"
+            app:argType="float" />
+        <argument
+            android:name="latitude"
+            app:argType="float" />
+        <argument
+            android:name="type_bien"
             app:argType="float" />
     </fragment>
 </navigation>

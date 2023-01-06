@@ -38,14 +38,14 @@ class EstimationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.root.background.alpha = 125
+
 
         val args : EstimationFragmentArgs by navArgs()
         val estimatorViewModel : EstimatorViewModel by viewModels()
 
         val ortEnvironment = OrtEnvironment.getEnvironment()
         val ortSession = createORTSession( ortEnvironment )
-        estimatorViewModel.estimate(args.surfaceHabitable,args.numberRooms,args.surfaceTerrain,1.071855f,49.402764f, 1f, ortSession , ortEnvironment)
+        estimatorViewModel.estimate(args.surfaceHabitable,args.numberRooms,args.surfaceTerrain,args.longitude,args.latitude, args.typeBien, ortSession , ortEnvironment)
 
         estimatorViewModel.estimationResult.observe(viewLifecycleOwner){ value ->
             if(value <= 0f) {
@@ -56,16 +56,19 @@ class EstimationFragment : Fragment() {
             else if(value <= 200000f){
                 binding.estimationText.text = getString(R.string.estimation_text, value)
                 binding.root.background = context?.let { getDrawable(it,R.mipmap.ic_low_cost_foreground) }
+                binding.root.background.alpha = 210
             }
 
             else if(value <= 400000f){
                 binding.estimationText.text = getString(R.string.estimation_text, value)
                 binding.root.background = context?.let { getDrawable(it,R.mipmap.ic_mid_cost_foreground) }
+                binding.root.background.alpha = 210
             }
 
-            else if(value > 600000f){
+            else if(value > 400000f){
                 binding.estimationText.text = getString(R.string.estimation_text, value)
                 binding.root.background = context?.let { getDrawable(it,R.mipmap.ic_high_cost_foreground) }
+                binding.root.background.alpha = 210
             }
         }
 

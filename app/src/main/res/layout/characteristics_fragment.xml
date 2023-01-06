@@ -10,53 +10,109 @@
     android:padding="16dp">
 
 
-
-    <EditText
-        android:id="@+id/editText1"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/edit_text_carac1_hint"
-        android:layout_marginBottom="16dp"
-        android:textSize="20sp"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:importantForAutofill="no"/>
+        android:layout_marginBottom="16dp">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:importantForAutofill="no"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/editText2"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/edit_text_carac1_hint"
-        android:layout_marginBottom="16dp"
-        android:textSize="20sp"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:importantForAutofill="no"/>
+        android:hint="@string/edit_text_carac2_hint"
+        android:layout_marginBottom="16dp">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:importantForAutofill="no"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/editText3"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/edit_text_carac1_hint"
-        android:layout_marginBottom="16dp"
-        android:textSize="20sp"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:importantForAutofill="no"/>
+        android:hint="@string/edit_text_carac3_hint"
+        android:layout_marginBottom="16dp">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:importantForAutofill="no"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/editText4"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/edit_text_carac1_hint"
-        android:layout_marginBottom="16dp"
-        android:textSize="20sp"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:importantForAutofill="no"/>
+        android:hint="@string/edit_text_carac4_hint"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:importantForAutofill="no"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_text_carac5_hint"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:importantForAutofill="no"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_text_carac6_hint"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:importantForAutofill="no"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
 
 
     <Button

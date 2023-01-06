@@ -40,21 +40,19 @@ class CharacteristicsFragment : Fragment() {
                 val surfaceR = binding.editText1.text.toString().toFloatOrNull()
                 val nombreP = binding.editText2.text.toString().toFloatOrNull()
                 val surfaceT = binding.editText3.text.toString().toFloatOrNull()
-                val typeBien = binding.editText4.text.toString().toFloatOrNull()
+                val longitude = binding.editText4.text.toString().toFloatOrNull()
+                val latitude = binding.editText5.text.toString().toFloatOrNull()
+                val typeBien = binding.editText6.text.toString().toFloatOrNull()
 
-                if (surfaceR != null && nombreP != null && surfaceT != null && typeBien != null){
-                    val action = CharacteristicsFragmentDirections.actionCharacteristicsFragmentToEstimationFragment(surfaceR,nombreP,surfaceT,typeBien)
+                if (surfaceR != null && nombreP != null && surfaceT != null && longitude != null && latitude != null && typeBien != null){
+                    val action = CharacteristicsFragmentDirections.actionCharacteristicsFragmentToEstimationFragment(surfaceR,nombreP,surfaceT,longitude,latitude,typeBien)
                     findNavController().navigate(action)
                 }
                 else{
                     Toast.makeText( activity, "Veuillez remplir tous les champs" , Toast.LENGTH_LONG ).show()
                 }
             }catch (e: java.lang.NumberFormatException){
-                val carac1 = -1.0f
-                val carac2 = -1.0f
-                val carac3 = -1.0f
-                val carac4 = -1.0f
-                val action = CharacteristicsFragmentDirections.actionCharacteristicsFragmentToEstimationFragment(carac1,carac2,carac3,carac4)
+                val action = CharacteristicsFragmentDirections.actionCharacteristicsFragmentToEstimationFragment(-1f,-1f,-1f,-1f,-1f,-1f)
                 findNavController().navigate(action)
             }
         }
