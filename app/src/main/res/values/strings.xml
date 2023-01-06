@@ -12,5 +12,5 @@
     <string name="edit_text_carac3_hint">Surface terrain</string>
     <string name="edit_text_carac4_hint">Longitude</string>
     <string name="edit_text_carac5_hint">Latitude</string>
-    <string name="edit_text_carac6_hint">Type de bien</string>
+    <string name="edit_text_carac6_hint">Type de bien 1 pour maison 2 pour appartement</string>
 </resources>

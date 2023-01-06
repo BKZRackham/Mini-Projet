@@ -20,21 +20,21 @@
         android:label="EstimationFragment" >
         <argument
             android:name="surface_habitable"
-            app:argType="float" />
-        <argument
-            android:name="surface_terrain"
-            app:argType="float" />
+            app:argType="java.lang.Double" />
         <argument
             android:name="number_rooms"
-            app:argType="float" />
+            app:argType="java.lang.Double" />
+        <argument
+            android:name="surface_terrain"
+            app:argType="java.lang.Double" />
         <argument
             android:name="longitude"
-            app:argType="float" />
+            app:argType="java.lang.Double" />
         <argument
             android:name="latitude"
-            app:argType="float" />
+            app:argType="java.lang.Double" />
         <argument
             android:name="type_bien"
-            app:argType="float" />
+            app:argType="java.lang.Double" />
     </fragment>
 </navigation>

@@ -1,9 +1,8 @@
 package fr.vinwin.miniprojet.backend
 
-import ai.onnxruntime.OrtEnvironment
-import ai.onnxruntime.OrtSession
+
 
 interface EstimatorBackend {
+    fun estimate(surfaceR : Double, nombreP: Double , surfaceT : Double , longitude : Double , latitude : Double , typeBien : Double) : Double
 
-    fun estimate(surfaceR : Float, nombreP: Float , surfaceT : Float , longitude : Float , latitude : Float , typeBien : Float) : Float
 }

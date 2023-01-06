@@ -1,7 +1,5 @@
 package fr.vinwin.miniprojet.backend
 
-import ai.onnxruntime.OrtEnvironment
-import ai.onnxruntime.OrtSession
 import javax.inject.Inject
 
 
@@ -9,7 +7,8 @@ class FakeBackendImpl @Inject constructor () : EstimatorBackend {
 
 
 
-    override fun estimate  (surfaceR : Float, nombreP: Float , surfaceT : Float , longitude : Float , latitude : Float , typeBien : Float): Float {
-        return (75000.55f)
+    //Fonction fake qui remplace le backend en cas de problème
+    override fun estimate  (surfaceR : Double, nombreP: Double , surfaceT : Double , longitude : Double , latitude : Double , typeBien : Double): Double {
+        return (75000.55)
     }
 }

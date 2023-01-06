@@ -1,8 +1,5 @@
 package fr.vinwin.miniprojet.viewModel
 
-import ai.onnxruntime.OrtEnvironment
-import ai.onnxruntime.OrtSession
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
@@ -17,11 +14,13 @@ private const val STATE_KEY_RESULT = "state_key_result"
 @HiltViewModel
 class EstimatorViewModel @Inject constructor(state : SavedStateHandle, private val estimatorBackend: EstimatorBackend): ViewModel(){
 
-    private val _estimationResult: MutableLiveData<Float> = state.getLiveData(STATE_KEY_RESULT, 0f)
-    val estimationResult: LiveData<Float> = _estimationResult
+    //On créer la LiveData de manière à conserver la donnée resultat
+    private val _estimationResult: MutableLiveData<Double> = state.getLiveData(STATE_KEY_RESULT, 0.0)
+    val estimationResult: LiveData<Double> = _estimationResult
 
 
-    fun estimate (surfaceR : Float, nombreP: Float , sufaceT : Float , longitude : Float , latitude : Float , typeBien : Float){
+    //Appel de la fonction du backend
+    fun estimate (surfaceR : Double, nombreP: Double , sufaceT : Double , longitude : Double , latitude : Double , typeBien : Double){
         _estimationResult.value = estimatorBackend.estimate(surfaceR,nombreP,sufaceT,longitude,latitude,typeBien)
 
     }
