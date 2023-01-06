@@ -8,7 +8,11 @@
     android:orientation="vertical"
     tools:context=".view.MainActivity"
     android:padding="16dp"
+    android:background="@mipmap/ic_low_cost_foreground"
+
     >
+
+
 
     <ImageView
         android:id="@+id/house_icon"

@@ -3,6 +3,7 @@ package fr.vinwin.miniprojet.backend
 import ai.onnxruntime.OnnxTensor
 import ai.onnxruntime.OrtEnvironment
 import ai.onnxruntime.OrtSession
+import android.util.Log
 import fr.vinwin.miniprojet.R
 import java.nio.FloatBuffer
 import javax.inject.Inject
@@ -35,12 +36,13 @@ class EstimatorBackendImpl @Inject constructor() : EstimatorBackend {
         )
         // Create input tensor with floatBufferInputs of shape ( 1 , 6 )
         val inputTensor =
-            OnnxTensor.createTensor(ortEnvironment, floatBufferInputs, longArrayOf(6, 1))
+            OnnxTensor.createTensor(ortEnvironment, floatBufferInputs, longArrayOf(1, 6))
         // Run the model
         val results = ortSession.run(mapOf(inputName to inputTensor))
         // Fetch and return the results
         val output = results[0].value as Array<FloatArray>
-        return output[0][0]
+        Log.d("test", "valeur " + output[0][0])
+        return (output[0][0])
     }
 }
 

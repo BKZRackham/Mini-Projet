@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.content.res.AppCompatResources.getDrawable
+import androidx.core.view.ViewCompat.setBackground
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
@@ -36,6 +38,8 @@ class EstimationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.root.background.alpha = 125
+
         val args : EstimationFragmentArgs by navArgs()
         val estimatorViewModel : EstimatorViewModel by viewModels()
 
@@ -49,8 +53,19 @@ class EstimationFragment : Fragment() {
 
             }
 
-            else if(value > 0f){
+            else if(value <= 200000f){
                 binding.estimationText.text = getString(R.string.estimation_text, value)
+                binding.root.background = context?.let { getDrawable(it,R.mipmap.ic_low_cost_foreground) }
+            }
+
+            else if(value <= 400000f){
+                binding.estimationText.text = getString(R.string.estimation_text, value)
+                binding.root.background = context?.let { getDrawable(it,R.mipmap.ic_mid_cost_foreground) }
+            }
+
+            else if(value > 600000f){
+                binding.estimationText.text = getString(R.string.estimation_text, value)
+                binding.root.background = context?.let { getDrawable(it,R.mipmap.ic_high_cost_foreground) }
             }
         }
 
